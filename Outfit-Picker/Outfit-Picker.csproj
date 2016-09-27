@@ -157,18 +157,28 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccessoriesController.cs" />
     <Compile Include="Controllers\BottomsController.cs" />
+    <Compile Include="Controllers\ColorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OccasionsController.cs" />
     <Compile Include="Controllers\OutfitsController.cs" />
+    <Compile Include="Controllers\SeasonsController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Controllers\TopsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609270029054_initial.cs" />
+    <Compile Include="Migrations\201609270029054_initial.Designer.cs">
+      <DependentUpon>201609270029054_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessory.cs" />
     <Compile Include="Models\Bottom.cs" />
-    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Color.cs" />
+    <Compile Include="Models\Occasion.cs" />
     <Compile Include="Models\Outfit.cs" />
     <Compile Include="Models\Outfit_PickerContext.cs" />
+    <Compile Include="Models\Season.cs" />
     <Compile Include="Models\Shoe.cs" />
     <Compile Include="Models\Top.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -178,6 +188,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Red Tshirt.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -227,21 +238,36 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Colors\Create.cshtml" />
+    <Content Include="Views\Colors\Delete.cshtml" />
+    <Content Include="Views\Colors\Details.cshtml" />
+    <Content Include="Views\Colors\Edit.cshtml" />
+    <Content Include="Views\Colors\Index.cshtml" />
+    <Content Include="Views\Seasons\Create.cshtml" />
+    <Content Include="Views\Seasons\Delete.cshtml" />
+    <Content Include="Views\Seasons\Details.cshtml" />
+    <Content Include="Views\Seasons\Edit.cshtml" />
+    <Content Include="Views\Seasons\Index.cshtml" />
+    <Content Include="Views\Occasions\Create.cshtml" />
+    <Content Include="Views\Occasions\Delete.cshtml" />
+    <Content Include="Views\Occasions\Details.cshtml" />
+    <Content Include="Views\Occasions\Edit.cshtml" />
+    <Content Include="Views\Occasions\Index.cshtml" />
     <Content Include="Views\Tops\Create.cshtml" />
     <Content Include="Views\Tops\Delete.cshtml" />
     <Content Include="Views\Tops\Details.cshtml" />
     <Content Include="Views\Tops\Edit.cshtml" />
     <Content Include="Views\Tops\Index.cshtml" />
-    <Content Include="Views\Bottoms\Create.cshtml" />
-    <Content Include="Views\Bottoms\Delete.cshtml" />
-    <Content Include="Views\Bottoms\Details.cshtml" />
-    <Content Include="Views\Bottoms\Edit.cshtml" />
-    <Content Include="Views\Bottoms\Index.cshtml" />
     <Content Include="Views\Shoes\Create.cshtml" />
     <Content Include="Views\Shoes\Delete.cshtml" />
     <Content Include="Views\Shoes\Details.cshtml" />
     <Content Include="Views\Shoes\Edit.cshtml" />
     <Content Include="Views\Shoes\Index.cshtml" />
+    <Content Include="Views\Bottoms\Create.cshtml" />
+    <Content Include="Views\Bottoms\Delete.cshtml" />
+    <Content Include="Views\Bottoms\Details.cshtml" />
+    <Content Include="Views\Bottoms\Edit.cshtml" />
+    <Content Include="Views\Bottoms\Index.cshtml" />
     <Content Include="Views\Accessories\Create.cshtml" />
     <Content Include="Views\Accessories\Delete.cshtml" />
     <Content Include="Views\Accessories\Details.cshtml" />
@@ -261,6 +287,11 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609270029054_initial.resx">
+      <DependentUpon>201609270029054_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

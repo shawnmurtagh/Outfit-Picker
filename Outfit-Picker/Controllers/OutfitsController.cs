@@ -17,7 +17,8 @@ namespace Outfit_Picker.Controllers
         // GET: Outfits
         public ActionResult Index()
         {
-            return View(db.Outfits.ToList());
+            var outfits = db.Outfits.Include(o => o.Bottom).Include(o => o.Shoe).Include(o => o.Top);
+            return View(outfits.ToList());
         }
 
         // GET: Outfits/Details/5
@@ -38,6 +39,9 @@ namespace Outfit_Picker.Controllers
         // GET: Outfits/Create
         public ActionResult Create()
         {
+            ViewBag.BottomID = new SelectList(db.Bottoms, "BottomID", "Name");
+            ViewBag.ShoeID = new SelectList(db.Shoes, "ShoeID", "Name");
+            ViewBag.TopID = new SelectList(db.Tops, "TopID", "Name");
             return View();
         }
 
@@ -46,7 +50,7 @@ namespace Outfit_Picker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OutfitID,OutfitName")] Outfit outfit)
+        public ActionResult Create([Bind(Include = "OutfitID,OutfitName,TopID,BottomID,ShoeID")] Outfit outfit)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +59,9 @@ namespace Outfit_Picker.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.BottomID = new SelectList(db.Bottoms, "BottomID", "Name", outfit.BottomID);
+            ViewBag.ShoeID = new SelectList(db.Shoes, "ShoeID", "Name", outfit.ShoeID);
+            ViewBag.TopID = new SelectList(db.Tops, "TopID", "Name", outfit.TopID);
             return View(outfit);
         }
 
@@ -70,6 +77,9 @@ namespace Outfit_Picker.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.BottomID = new SelectList(db.Bottoms, "BottomID", "Name", outfit.BottomID);
+            ViewBag.ShoeID = new SelectList(db.Shoes, "ShoeID", "Name", outfit.ShoeID);
+            ViewBag.TopID = new SelectList(db.Tops, "TopID", "Name", outfit.TopID);
             return View(outfit);
         }
 
@@ -78,7 +88,7 @@ namespace Outfit_Picker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OutfitID,OutfitName")] Outfit outfit)
+        public ActionResult Edit([Bind(Include = "OutfitID,OutfitName,TopID,BottomID,ShoeID")] Outfit outfit)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +96,9 @@ namespace Outfit_Picker.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.BottomID = new SelectList(db.Bottoms, "BottomID", "Name", outfit.BottomID);
+            ViewBag.ShoeID = new SelectList(db.Shoes, "ShoeID", "Name", outfit.ShoeID);
+            ViewBag.TopID = new SelectList(db.Tops, "TopID", "Name", outfit.TopID);
             return View(outfit);
         }
 

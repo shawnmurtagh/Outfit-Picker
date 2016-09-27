@@ -17,7 +17,8 @@ namespace Outfit_Picker.Controllers
         // GET: Tops
         public ActionResult Index()
         {
-            return View(db.Tops.ToList());
+            var tops = db.Tops.Include(t => t.Color).Include(t => t.Occasion).Include(t => t.Season);
+            return View(tops.ToList());
         }
 
         // GET: Tops/Details/5
@@ -38,6 +39,9 @@ namespace Outfit_Picker.Controllers
         // GET: Tops/Create
         public ActionResult Create()
         {
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "ColorName");
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName");
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName");
             return View();
         }
 
@@ -46,7 +50,7 @@ namespace Outfit_Picker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TopID,Name,PhotoPath,Type,Color,Season,Occasion")] Top top)
+        public ActionResult Create([Bind(Include = "TopID,Name,PhotoPath,Type,ColorID,SeasonID,OccasionID")] Top top)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +59,9 @@ namespace Outfit_Picker.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "ColorName", top.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName", top.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             return View(top);
         }
 
@@ -70,6 +77,9 @@ namespace Outfit_Picker.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "ColorName", top.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName", top.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             return View(top);
         }
 
@@ -78,7 +88,7 @@ namespace Outfit_Picker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TopID,Name,PhotoPath,Type,Color,Season,Occasion")] Top top)
+        public ActionResult Edit([Bind(Include = "TopID,Name,PhotoPath,Type,ColorID,SeasonID,OccasionID")] Top top)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +96,9 @@ namespace Outfit_Picker.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "ColorName", top.ColorID);
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "OccasionName", top.OccasionID);
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "SeasonName", top.SeasonID);
             return View(top);
         }
 

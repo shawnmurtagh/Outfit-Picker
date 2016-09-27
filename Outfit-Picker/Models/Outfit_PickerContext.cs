@@ -28,5 +28,11 @@ namespace Outfit_Picker.Models
         public System.Data.Entity.DbSet<Outfit_Picker.Models.Accessory> Accessories { get; set; }
 
         public System.Data.Entity.DbSet<Outfit_Picker.Models.Outfit> Outfits { get; set; }
+
+        public System.Data.Entity.DbSet<Outfit_Picker.Models.Color> Colors { get; set; }
+
+        public System.Data.Entity.DbSet<Outfit_Picker.Models.Season> Seasons { get; set; }
+
+        public System.Data.Entity.DbSet<Outfit_Picker.Models.Occasion> Occasions { get; set; }
     }
 }

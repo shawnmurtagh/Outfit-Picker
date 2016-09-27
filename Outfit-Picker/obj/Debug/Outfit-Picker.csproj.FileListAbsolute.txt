@@ -68,3 +68,6 @@ c:\users\wecancodeit\documents\visual studio 2015\Projects\Outfit-Picker\Outfit-
 c:\users\wecancodeit\documents\visual studio 2015\Projects\Outfit-Picker\Outfit-Picker\bin\EntityFramework.SqlServer.dll
 c:\users\wecancodeit\documents\visual studio 2015\Projects\Outfit-Picker\Outfit-Picker\bin\EntityFramework.xml
 c:\users\wecancodeit\documents\visual studio 2015\Projects\Outfit-Picker\Outfit-Picker\bin\EntityFramework.SqlServer.xml
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit-Picker.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.initial.resources
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit-Picker.csproj.GenerateResource.Cache

@@ -40,27 +40,26 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model._Color, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ColorID, "ColorID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*This is where we will put the dropdown list!!!!*@
-                @Html.EditorFor(model => model._Color, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model._Color, "", new { @class = "text-danger" })
+                @Html.DropDownList("ColorID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ColorID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Season, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.SeasonID, "SeasonID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Season, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Season, "", new { @class = "text-danger" })
+                @Html.DropDownList("SeasonID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SeasonID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Occasion, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.OccasionID, "OccasionID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Occasion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Occasion, "", new { @class = "text-danger" })
+                @Html.DropDownList("OccasionID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OccasionID, "", new { @class = "text-danger" })
             </div>
         </div>
 
