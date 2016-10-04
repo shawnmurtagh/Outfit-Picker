@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace Outfit_Picker.Models
 {
     public class Outfit
     {
+        public Outfit()
+        {
+            this.Accessories = new HashSet<Accessory>();
+        }
+
         public int OutfitID { get; set; }
         public string OutfitName { get; set; }
 
@@ -18,7 +20,7 @@ namespace Outfit_Picker.Models
         public virtual Bottom Bottom { get; set; }
         public virtual Shoe Shoe { get; set; }
 
-        ICollection <Accessory> Accessories { get; set; }
+        public virtual ICollection <Accessory> Accessories { get; set; }
 
 
     }

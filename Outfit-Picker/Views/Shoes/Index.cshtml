@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Season.SeasonName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.ShoeName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PhotoPath)
@@ -29,6 +29,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Type)
         </th>
+        <th>Accessories</th>
         <th></th>
     </tr>
 
@@ -44,7 +45,7 @@
             @Html.DisplayFor(modelItem => item.Season.SeasonName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Name)
+            @Html.DisplayFor(modelItem => item.ShoeName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PhotoPath)
@@ -52,6 +53,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.Type)
         </td>
+
+        <td>
+            <img class="thumbnail" style="width:20%; height:10%" src="@Url.Content(item.PhotoPath)" />
+        </td>
+
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ShoeID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ShoeID }) |

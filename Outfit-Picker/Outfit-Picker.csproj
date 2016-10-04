@@ -167,9 +167,33 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201609270029054_initial.cs" />
-    <Compile Include="Migrations\201609270029054_initial.Designer.cs">
-      <DependentUpon>201609270029054_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201609272157081_initial.cs" />
+    <Compile Include="Migrations\201609272157081_initial.Designer.cs">
+      <DependentUpon>201609272157081_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609272354431_fix-outfits.cs" />
+    <Compile Include="Migrations\201609272354431_fix-outfits.Designer.cs">
+      <DependentUpon>201609272354431_fix-outfits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609292205325_add-migration first.cs" />
+    <Compile Include="Migrations\201609292205325_add-migration first.Designer.cs">
+      <DependentUpon>201609292205325_add-migration first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609292220480_add-migration second.cs" />
+    <Compile Include="Migrations\201609292220480_add-migration second.Designer.cs">
+      <DependentUpon>201609292220480_add-migration second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609292301346_third.cs" />
+    <Compile Include="Migrations\201609292301346_third.Designer.cs">
+      <DependentUpon>201609292301346_third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609292318559_third1.cs" />
+    <Compile Include="Migrations\201609292318559_third1.Designer.cs">
+      <DependentUpon>201609292318559_third1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609292319499_fourth.cs" />
+    <Compile Include="Migrations\201609292319499_fourth.Designer.cs">
+      <DependentUpon>201609292319499_fourth.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Accessory.cs" />
@@ -182,13 +206,30 @@
     <Compile Include="Models\Shoe.cs" />
     <Compile Include="Models\Top.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\OutfitViewModel.cs" />
+    <Compile Include="ViewModels\SelectListItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\blue belt.jpg" />
+    <Content Include="Content\Images\blue dress shoes.jpg" />
+    <Content Include="Content\Images\Blue Jeans.jpg" />
+    <Content Include="Content\Images\blue sweat pants.jpg" />
+    <Content Include="Content\Images\green rolex.jpg" />
+    <Content Include="Content\Images\green sweater.jpeg" />
+    <Content Include="Content\Images\il_340x270.500675399_198m.jpg" />
+    <Content Include="Content\Images\red shorts.jpg" />
+    <Content Include="Content\Images\red tennis shoes.jpg" />
+    <Content Include="Content\Images\Red Tie.png" />
     <Content Include="Content\Images\Red Tshirt.png" />
+    <Content Include="Content\Images\Navy Blazer.jpg" />
+    <Content Include="Content\Images\yellow baseball hat.jpg" />
+    <Content Include="Content\Images\yellow cowboy boots.jpg" />
+    <Content Include="Content\Images\Yellow Flannel.jpg" />
+    <Content Include="Content\Images\yellow slacks.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -289,8 +330,26 @@
     <Content Include="Scripts\jquery-3.1.0.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609270029054_initial.resx">
-      <DependentUpon>201609270029054_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609272157081_initial.resx">
+      <DependentUpon>201609272157081_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609272354431_fix-outfits.resx">
+      <DependentUpon>201609272354431_fix-outfits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609292205325_add-migration first.resx">
+      <DependentUpon>201609292205325_add-migration first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609292220480_add-migration second.resx">
+      <DependentUpon>201609292220480_add-migration second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609292301346_third.resx">
+      <DependentUpon>201609292301346_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609292318559_third1.resx">
+      <DependentUpon>201609292318559_third1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609292319499_fourth.resx">
+      <DependentUpon>201609292319499_fourth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

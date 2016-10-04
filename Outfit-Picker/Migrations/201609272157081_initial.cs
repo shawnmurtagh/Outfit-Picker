@@ -20,9 +20,9 @@ namespace Outfit_Picker.Migrations
                         OccasionID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.AccessoryID)
-                .ForeignKey("dbo.Colors", t => t.ColorID, cascadeDelete: true)
-                .ForeignKey("dbo.Occasions", t => t.OccasionID, cascadeDelete: true)
-                .ForeignKey("dbo.Seasons", t => t.SeasonID, cascadeDelete: true)
+                .ForeignKey("dbo.Colors", t => t.ColorID)
+                .ForeignKey("dbo.Occasions", t => t.OccasionID)
+                .ForeignKey("dbo.Seasons", t => t.SeasonID)
                 .Index(t => t.ColorID)
                 .Index(t => t.SeasonID)
                 .Index(t => t.OccasionID);
@@ -67,9 +67,9 @@ namespace Outfit_Picker.Migrations
                         OccasionID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.BottomID)
-                .ForeignKey("dbo.Colors", t => t.ColorID, cascadeDelete: true)
-                .ForeignKey("dbo.Occasions", t => t.OccasionID, cascadeDelete: true)
-                .ForeignKey("dbo.Seasons", t => t.SeasonID, cascadeDelete: true)
+                .ForeignKey("dbo.Colors", t => t.ColorID)
+                .ForeignKey("dbo.Occasions", t => t.OccasionID)
+                .ForeignKey("dbo.Seasons", t => t.SeasonID)
                 .Index(t => t.ColorID)
                 .Index(t => t.SeasonID)
                 .Index(t => t.OccasionID);
@@ -85,9 +85,9 @@ namespace Outfit_Picker.Migrations
                         ShoeID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.OutfitID)
-                .ForeignKey("dbo.Bottoms", t => t.BottomID, cascadeDelete: true)
-                .ForeignKey("dbo.Shoes", t => t.ShoeID, cascadeDelete: true)
-                .ForeignKey("dbo.Tops", t => t.TopID, cascadeDelete: true)
+                .ForeignKey("dbo.Bottoms", t => t.BottomID)
+                .ForeignKey("dbo.Shoes", t => t.ShoeID)
+                .ForeignKey("dbo.Tops", t => t.TopID)
                 .Index(t => t.TopID)
                 .Index(t => t.BottomID)
                 .Index(t => t.ShoeID);
@@ -105,9 +105,9 @@ namespace Outfit_Picker.Migrations
                         OccasionID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ShoeID)
-                .ForeignKey("dbo.Colors", t => t.ColorID, cascadeDelete: true)
-                .ForeignKey("dbo.Occasions", t => t.OccasionID, cascadeDelete: true)
-                .ForeignKey("dbo.Seasons", t => t.SeasonID, cascadeDelete: true)
+                .ForeignKey("dbo.Colors", t => t.ColorID)
+                .ForeignKey("dbo.Occasions", t => t.OccasionID)
+                .ForeignKey("dbo.Seasons", t => t.SeasonID)
                 .Index(t => t.ColorID)
                 .Index(t => t.SeasonID)
                 .Index(t => t.OccasionID);
@@ -125,9 +125,9 @@ namespace Outfit_Picker.Migrations
                         OccasionID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.TopID)
-                .ForeignKey("dbo.Colors", t => t.ColorID, cascadeDelete: true)
-                .ForeignKey("dbo.Occasions", t => t.OccasionID, cascadeDelete: true)
-                .ForeignKey("dbo.Seasons", t => t.SeasonID, cascadeDelete: true)
+                .ForeignKey("dbo.Colors", t => t.ColorID)
+                .ForeignKey("dbo.Occasions", t => t.OccasionID)
+                .ForeignKey("dbo.Seasons", t => t.SeasonID)
                 .Index(t => t.ColorID)
                 .Index(t => t.SeasonID)
                 .Index(t => t.OccasionID);

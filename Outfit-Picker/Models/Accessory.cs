@@ -11,7 +11,7 @@ namespace Outfit_Picker.Models
         public int AccessoryID { get; set; }
 
         [Required, StringLength(40)]
-        public string Name { get; set; }
+        public string AccessoryName { get; set; }
 
         public string PhotoPath { get; set; }
 
@@ -32,6 +32,7 @@ namespace Outfit_Picker.Models
         public virtual Season Season { get; set; }
         public virtual Occasion Occasion { get; set; }
 
-        public virtual IEnumerable<Outfit> Outfit { get; set; }
+        public virtual ICollection<Outfit> Outfits { get; set; }
+        public object AccessoryId { get; internal set; }
     }
 }

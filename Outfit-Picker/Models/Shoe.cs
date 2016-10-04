@@ -11,7 +11,7 @@ namespace Outfit_Picker.Models
         public int ShoeID { get; set; }
 
         [Required, StringLength(40)]
-        public string Name { get; set; }
+        public string ShoeName { get; set; }
 
         public string PhotoPath { get; set; }
 

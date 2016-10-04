@@ -50,7 +50,7 @@ namespace Outfit_Picker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AccessoryID,Name,PhotoPath,Type,ColorID,SeasonID,OccasionID")] Accessory accessory)
+        public ActionResult Create([Bind(Include = "AccessoryID,AccessoryName,PhotoPath,Type,ColorID,SeasonID,OccasionID")] Accessory accessory)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace Outfit_Picker.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AccessoryID,Name,PhotoPath,Type,ColorID,SeasonID,OccasionID")] Accessory accessory)
+        public ActionResult Edit([Bind(Include = "AccessoryID,AccessoryName,PhotoPath,Type,ColorID,SeasonID,OccasionID")] Accessory accessory)
         {
             if (ModelState.IsValid)
             {

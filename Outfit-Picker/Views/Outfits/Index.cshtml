@@ -12,34 +12,51 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Bottom.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Shoe.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Top.Name)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.OutfitName)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bottom.BottomName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shoe.ShoeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Top.TopName)
+        </th>
+
+        <th>
+            Accessories
+        </th>
+
+
+
+
+
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Bottom.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Shoe.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Top.Name)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.OutfitName)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bottom.BottomName) <div><img class="img-thumbnail" style="width:20%" src="@Url.Content(item.Bottom.PhotoPath)" /></div>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shoe.ShoeName) <div><img class="img-thumbnail" style="width:20%" src="@Url.Content(item.Shoe.PhotoPath)" /></div>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Top.TopName) <div><img class="img-thumbnail" style="width:20%" src="@Url.Content(item.Top.PhotoPath)" /></div>
+        </td>
+
+        <td>Accessories
+        @foreach (var accessory in item.Accessories)
+        {
+            <span><img class="img-thumbnail" style="width:10%" src="@Url.Content(accessory.PhotoPath)" /></span>
+        }
+        </td>
+
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.OutfitID }) |
             @Html.ActionLink("Details", "Details", new { id=item.OutfitID }) |

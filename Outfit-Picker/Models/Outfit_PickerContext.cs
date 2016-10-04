@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -17,6 +18,11 @@ namespace Outfit_Picker.Models
     
         public Outfit_PickerContext() : base("name=Outfit_PickerContext")
         {
+        }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
         }
 
         public System.Data.Entity.DbSet<Outfit_Picker.Models.Top> Tops { get; set; }

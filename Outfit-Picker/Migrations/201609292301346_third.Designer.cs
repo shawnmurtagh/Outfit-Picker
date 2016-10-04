@@ -7,13 +7,13 @@ namespace Outfit_Picker.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class initial : IMigrationMetadata
+    public sealed partial class third : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(third));
         
         string IMigrationMetadata.Id
         {
-            get { return "201609270029054_initial"; }
+            get { return "201609292301346_third"; }
         }
         
         string IMigrationMetadata.Source

@@ -12,7 +12,7 @@ namespace Outfit_Picker.Models
         public int TopID { get; set; }
 
         [Required, StringLength(40)]
-        public string Name { get; set; }
+        public string TopName { get; set; }
 
         public string PhotoPath { get; set; }
 
