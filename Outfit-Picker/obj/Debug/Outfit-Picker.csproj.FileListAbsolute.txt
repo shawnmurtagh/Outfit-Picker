@@ -150,3 +150,9 @@ C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit Picker\Outfit-
 C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit Picker\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.third1.resources
 C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit Picker\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.fourth.resources
 C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit Picker\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit-Picker.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.fixoutfits.resources
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.addmigrationfirst.resources
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.addmigrationsecond.resources
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.third.resources
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.third1.resources
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\Outfit-Picker\Outfit-Picker\obj\Debug\Outfit_Picker.Migrations.fourth.resources

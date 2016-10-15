@@ -221,11 +221,14 @@
     <Content Include="Content\Images\green rolex.jpg" />
     <Content Include="Content\Images\green sweater.jpeg" />
     <Content Include="Content\Images\il_340x270.500675399_198m.jpg" />
+    <Content Include="Content\Images\main-img.jpg" />
     <Content Include="Content\Images\red shorts.jpg" />
     <Content Include="Content\Images\red tennis shoes.jpg" />
     <Content Include="Content\Images\Red Tie.png" />
     <Content Include="Content\Images\Red Tshirt.png" />
     <Content Include="Content\Images\Navy Blazer.jpg" />
+    <Content Include="Content\Images\Theme\background.jpg" />
+    <Content Include="Content\Images\Theme\mars-background.jpg" />
     <Content Include="Content\Images\yellow baseball hat.jpg" />
     <Content Include="Content\Images\yellow cowboy boots.jpg" />
     <Content Include="Content\Images\Yellow Flannel.jpg" />

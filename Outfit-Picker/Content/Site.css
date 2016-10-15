@@ -1,12 +1,18 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    /*custom*/
+    background-image: url('Images/Theme/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -23,7 +29,31 @@ textarea {
     max-width: 280px;
 }
 
+.jumbotron{
+    background: linear-gradient(rgba(0, 0, 0, .01), rgba(0, 0, 0, .1));
+    text-align:center;
+    color:white;
+}
 
-/*IMAGES*/
+.main-img {
+    background-image: url('Images/main-img.jpg');
+    max-height: 300px;
+    max-width: 200px;
+    background-size:cover;
+}
 
+.btn-custom {
+    border: .5px solid white;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 25%;
+    color:white;
+}
 
+.brand-name{
+    font-family: 'Monoton', cursive;
+    color:lightblue;
+}
+
+.secondary-font{
+    font-family: 'Fruktur', cursive;
+}
